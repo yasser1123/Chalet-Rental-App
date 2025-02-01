@@ -1,112 +1,120 @@
-### Chalet Rental Mobile Application Documentation
+# 📌 Chalet Rental Mobile Application
 
-#### Introduction
-I’m delighted to introduce to you the new Chalet Rental Mobile Application that serves brokers and renters to manage and organize their work, preventing interference between different chalets and their reservations while minimizing errors and unintended faults. The application provides a seamless user interface.
+## 📖 Introduction
+Welcome to the **Chalet Rental Mobile Application**, a powerful tool designed for **brokers and renters** to efficiently manage and organize their bookings. This application helps prevent conflicts between different chalets, avoids **double bookings**, and ensures a seamless user experience. 
 
-The idea is based on organizing bookings between the renter and their assistants. It includes features such as adding chalets, viewing chalet details, editing chalets, submitting reservations, viewing reservations, and deleting reservations. It also prevents issues like double booking, confusion between chalet names and details, and more.
+The system operates on **Role-Based Access Control (RBAC)**, restricting specific actions such as adding, editing, and deleting chalets to **admins only**, while assistants can manage reservations.
 
-The application is built based on Role-Based Access Control (RBAC), which restricts certain features from ordinary assistants, such as adding, editing, and deleting chalets. This gives the admin full control over these critical actions.
+---
 
-#### Technology Stack
+## 🚀 Technology Stack
 - **Front-end:** React Native, Expo
 - **Back-end:** Firebase (Firestore, Authentication)
-- **Tools:** Firebase Authentication, Firebase Firestore for data storage
+- **Tools:** Firebase Authentication, Firestore
 - **Libraries:** React Navigation, React Native Paper
 
-#### Installation Guide
-##### Prerequisites:
-1. Download and install Node.js (version 20.18.0 or higher)
-2. Create a new folder, open it using VS Code, and open a new terminal
-3. Install the Expo CLI by running:
+---
+
+## 📥 Installation Guide
+
+### Prerequisites:
+1. Install **Node.js** (version 20.18.0 or higher)
+2. Create a new project folder and open it with **VS Code**
+3. Install the Expo CLI globally:
    ```sh
    npm install -g expo-cli
    ```
 
-##### Installation Steps:
-1. Clone the repository:
+### Steps:
+1. **Clone the repository**:
    ```sh
    git clone https://github.com/yasser1123/Chalet-Rental-App.git
    ```
-2. Navigate to the project folder:
+2. **Navigate to the project folder**:
    ```sh
    cd ChaletRentalApp
    ```
-3. Install dependencies:
+3. **Install dependencies**:
    ```sh
    npm install
    ```
-4. Run the app:
+4. **Run the application**:
    ```sh
    npx expo start
    ```
-5. Download Expo Go to run the application on your device.
-6. Scan the QR code and wait for the app to bundle.
+5. Download **Expo Go** on your mobile device.
+6. **Scan the QR code** displayed in the terminal and wait for the app to load.
 
 ---
 
-### Waterfall Model Implementation
-The entire software was designed and implemented according to the Waterfall model principles, reducing software creation time and providing organized steps for efficient development.
+## 🔄 Waterfall Model Implementation
+This project follows the **Waterfall Model**, ensuring a structured and systematic approach to software development.
 
-#### 1. Requirements Analysis
-After consulting with the customer and understanding their needs, I brainstormed possible features and finalized the following:
-- **User authentication**
-- **RBAC (Role-Based Access Control)**
-- **Adding chalets**
-- **Editing chalets**
-- **Viewing chalets**
-- **Deleting chalets**
-- **Submitting reservations**
-- **Tracking reservations**
+### 1️⃣ Requirements Analysis
+**Key Features Identified:**
+✅ User Authentication (Admin & Assistants)  
+✅ Role-Based Access Control (RBAC)  
+✅ Chalet Management (Add, Edit, Delete)  
+✅ Reservation System with Conflict Prevention  
+✅ View and Track Reservations  
+✅ Simple & Efficient UI/UX Design  
 
-#### 2. System Analysis & Design
-This phase involved choosing the right technologies and structuring files for easy development and maintenance. 
+### 2️⃣ System Analysis & Design
+**Technology Choices:**
+- **React Native** – Cross-platform mobile app development
+- **Firebase Firestore** – Real-time database for smooth data handling
+- **Firebase Authentication** – Secure user logins & role management
+- **React Navigation** – Intuitive user experience
+- **React Native Paper** – Beautiful UI components
 
-**Technology Stack Choices:**
-- **Front-End:** React Native for building both iOS and Android apps with a single codebase.
-- **Database:** Firebase Firestore for real-time data storage.
-- **Authentication:** Firebase Authentication for secure logins and role management.
-- **RBAC:** Implemented to control access and permissions.
-- **Navigation:** React Navigation for smooth user experience.
-- **UI Components:** React Native Paper for a polished interface.
+### 3️⃣ Implementation
+✔️ Developed **authentication & role-based access**  
+✔️ Built the **chalet management system**  
+✔️ Designed a **conflict-free reservation system**  
+✔️ Integrated **React Navigation & UI components**  
 
-#### 3. Implementation
-Following the design plan, I developed the application in stages:
-- Implemented user login and RBAC for role management.
-- Developed chalet management features for admins (add, edit, delete chalets).
-- Implemented the reservation system to prevent double bookings.
-- Designed a simple and user-friendly navigation using React Navigation and React Native Paper.
+### 4️⃣ Testing
+🛠 **Unit Testing** – Ensured correct authentication and data flow  
+🔗 **Integration Testing** – Verified reservations & chalet interactions  
+📲 **End-to-End Testing** – Simulated real-world user scenarios  
 
-#### 4. Testing
-Once development was completed, thorough testing was conducted:
-- **Unit Testing:** Verified login functionality and role-based access.
-- **Integration Testing:** Ensured correct interaction between reservation and chalet data.
-- **End-to-End Testing:** Simulated full user scenarios to check usability for both admins and assistants.
-
-#### 5. Maintenance
-The final phase ensures ongoing app stability:
-- **Bug Fixes:** Regular monitoring and error resolution.
-- **Feature Updates:** Adding new features like notifications based on user feedback.
-- **Security Enhancements:** Keeping Firebase tools updated to protect user data.
+### 5️⃣ Maintenance & Future Enhancements
+🔹 **Bug Fixes & Security Patches**  
+🔹 **Role & Permission Refinements**  
+🔹 **Push Notifications for Booking Updates**  
+🔹 **Remote Configuration for Real-Time Changes**  
 
 ---
 
-### Disadvantages & Personal Opinion on the Waterfall Model
-While the Waterfall model provides structured development phases, it has drawbacks:
-- **Lack of Flexibility:** Any new feature request or change requires going back to earlier phases, which can be time-consuming.
-- **Testing Phase Placement:** Issues discovered late in testing may require significant rework.
+## ⚠️ Disadvantages of the Waterfall Model & Personal Insights
+### 🔴 Challenges Faced:
+❌ **Lack of Flexibility** – New features required revisiting earlier phases.  
+❌ **Late Bug Discovery** – Fixing major issues during testing was time-consuming.  
 
-**Example Challenges Faced:**
-- A validation bug allowed unsafe input injection, which could compromise data security.
-- Handling special characters (e.g., backslashes causing navigation issues) required additional fixes.
-
-However, for small-scale projects like this, the Waterfall model is still manageable since bugs and issues can be fixed without affecting a large user base. With technological advancements, some weaknesses of the model might be mitigated in the future, making software development more efficient.
+### 📝 Personal Opinion:
+The Waterfall Model works well for small to mid-scale projects where structured development is necessary. However, for larger projects requiring frequent updates, an **Agile methodology** might be a better fit.
 
 ---
 
-### Future Enhancements
-- **Implement proper input validation** to prevent security vulnerabilities.
-- **Add remote configuration support** to enable real-time updates without redeploying.
-- **Enhance role management features** to refine permissions and improve security.
-- **Introduce push notifications** for reservation updates and alerts.
+## 📌 Future Enhancements
+🔹 **Improve Input Validation** to enhance security  
+🔹 **Add Batch Reservation Processing** for efficiency  
+🔹 **Enhance Role Management Features** for scalability  
+🔹 **Introduce a Dark Mode UI** for a better user experience  
 
-This documentation outlines the complete journey of developing the Chalet Rental Mobile Application using the Waterfall model while considering future improvements.
+---
+
+## 📜 License
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+---
+
+## 🙏 Acknowledgments
+- **OpenCV** – Image processing capabilities
+- **Firebase** – Real-time database and authentication
+- **React Native & Expo** – Powerful mobile development tools
+- **React Native Paper** – Modern UI components
+
+---
+
+💡 *Feel free to contribute by following the guidelines in* [CONTRIBUTING.md](CONTRIBUTING.md). 🚀
